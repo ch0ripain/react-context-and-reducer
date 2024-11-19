@@ -68,6 +68,7 @@ function App() {
 
   const contextValue = {
     items: shoppingCart.items,
+    addItemToCart: handleAddItemToCart,
   };
 
   return (
