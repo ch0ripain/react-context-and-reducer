@@ -80,8 +80,9 @@ function shoppingCartReducer(state, action) {
 }
 ```
 <code>shoppingCartReducer</code> receive 2 parameters. 
-1- state: the latest state at the moment we call this function
-2- action: commonly a object with some key-values like <code>{type: 'ADD_ITEM', payload: id}</code>
+
+- state: the latest state at the moment we call this function
+- action: commonly a object with some key-values like <code>{type: 'ADD_ITEM', payload: id}</code>
 
 ## 🌐 Using context 🌐
 For use context we need to import two things
