@@ -81,8 +81,8 @@ function shoppingCartReducer(state, action) {
 ```
 <code>shoppingCartReducer</code> receive 2 parameters. 
 
-- state: the latest state at the moment we call this function
-- action: commonly a object with some key-values like <code>{type: 'ADD_ITEM', payload: id}</code>
+- state ➡️ the latest state at the moment we call this function
+- action ➡️ commonly a object with some key-values like <code>{type: 'ADD_ITEM', payload: id}</code>
 
 ## 🌐 Using context 🌐
 For use context we need to import two things
@@ -111,6 +111,7 @@ const totalPrice = items.reduce(
 </ul>
 ```
 With all the above we've been implemented globally state using context avoiding prop drilling and separating the state updating logic with reducer making a code more leaner and easy to mantain
+
 ---
 <p align="center">🌟 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🌟</p>
 <p align="center">🐸 I hope this README helps you in some way! 🐸</p>
