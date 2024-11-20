@@ -57,6 +57,9 @@ const [shoppingCartState, shoppingCartDispatch] = useReducer(
       items: [],
     }
   );
+  //...
+  <p>{items.length == 0 && No items :(}</p>
+  //...
 ```
 As shown above, the <code>shoppingCartState</code> should be treated as a read-only value.
 
