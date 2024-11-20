@@ -1,7 +1,7 @@
 # 🚀 Quick Introduction to React Context and Reducer 🚀
 ## 🌐 Context 🌐
-A context in React is a common way to make the state globally on all your app.
-First you need to create your context. For that you are going to use a function provided by React ➡️ <code>createContext</code> 
+In React, a Context is a common way to share state globally across your application. 
+To get started, you first need to create the context. This can be done using a function provided by React. ➡️ <code>createContext</code> 
 ```javascript
 import { createContext } from "react";
 export const CartContext = createContext({
