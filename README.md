@@ -11,10 +11,9 @@ export const CartContext = createContext({
 });
 ```
 As you can see above, we must import it to be available to use it.
-createContext can receive any JS expression like [], {}, 5, 'context'. 
+<code>createContext</code> can receive any JS expression like [], {}, 5, 'context'. 
 In this case we are defining a object with some properties with void values. This is a commonly good practice for have our context properties defined and also have autocompletation on our code.
-Once we've been defined our context we need to handle all the [logic needed by the context](🌀 Reducer 🌀/README.md).
-Then, a standard way to make our context usable is to make it a wrapper component using the <code>Context.Provider</code> property.
+A standard way to make our context usable is to make it a wrapper component using the <code>Context.Provider</code> property.
 
 ```javascript
 export default function CartContextProvider({ children }) {
