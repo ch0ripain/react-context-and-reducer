@@ -116,7 +116,7 @@ const totalPrice = items.reduce(
 </ul>
 ```
 > [!NOTE]
-> Prop drilling is passing data through multiple layers of components via props. Context avoids this by providing a way to share data directly with any component, no matter how deep it is in the tree.
+> <strong>Prop drilling</strong> is passing data through multiple layers of components via props. Context avoids this by providing a way to share data directly with any component, no matter how deep it is in the tree.
 
 With all the above, we have implemented a global state using context, avoiding prop drilling and separating the state update logic using a reducer. 
 This approach makes our code cleaner, more maintainable, and easier to understand.
