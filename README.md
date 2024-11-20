@@ -61,9 +61,7 @@ const [shoppingCartState, shoppingCartDispatch] = useReducer(
 As we can see above
 
 <code>shoppingCartState</code> it might be only treaty as a read-only value.
-
 <code>shoppingCartDistpach</code> is the dispatcher update function which we have to use to pass the new state changes and the type of change.
-
 <code>useReducer()</code> receive as a first argument the function with all the logic to update the state and as a second argument the inital state value
 
 As you can see useReducer is a hook similar to useState but in this hook we have to handle all the state update in a separated function.
