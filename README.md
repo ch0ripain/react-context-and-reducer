@@ -10,12 +10,12 @@ export const CartContext = createContext({
   updateCartItemQuantity: () => {},
 });
 ```
-As you can see above, we must import it to be available to use it.
-<code>createContext</code> can receive any JS expression like <code>[], {}, 5, 'context'</code>
-In this case we are defining a object with some properties with void values. 
+As shown above, we need to import <code>createContext</code> to make it available for use.
+The createContext function can accept any JavaScript expression, such as <code>[], {}, 5, or 'context'</code>
 
-This is a commonly good practice for have our context properties defined and also have autocompletation on our code.
-A standard way to make our context usable is to make it a wrapper component using the <code>Context.Provider</code> property.
+In this example, we define an object with some properties initialized to undefined values. This is a common best practice as it allows us to clearly define the properties of our context while enabling code autocompletion in our editor.
+
+A standard approach to make the context usable is to wrap it in a component using the <code>Context.Provider</code> property.
 
 ```javascript
 export default function CartContextProvider({ children }) {
@@ -29,7 +29,7 @@ export default function CartContextProvider({ children }) {
   );
 }
 ```
-Last we need to wrap our main component so all the childs and the main component i guess will have access to our context.
+Finally, we need to wrap our main component with the context provider. This ensures that the main component and all its child components will have access to the context.
 ```javascript
 import CartContextProvider from "./store/shopping-cart-context.jsx";
 
@@ -58,15 +58,15 @@ const [shoppingCartState, shoppingCartDispatch] = useReducer(
     }
   );
 ```
-As we can see above
+As explained above, the <code>shoppingCartState<code> should be treated as a read-only value.
 
-<code>shoppingCartState</code> it might be only treaty as a read-only value.
+On the other hand, <code>shoppingCartDispatch<code> is the dispatcher function that we use to pass the updated state and the type of change we want to perform.
 
-<code>shoppingCartDistpach</code> is the dispatcher update function which we have to use to pass the new state changes and the type of change.
+The <code>useReducer()<code> hook takes two arguments:
 
-<code>useReducer()</code> receive as a first argument the function with all the logic to update the state and as a second argument the inital state value
-
-As you can see useReducer is a hook similar to useState but in this hook we have to handle all the state update in a separated function.
+-A function that contains all the logic for updating the state.
+-The initial state value.
+In essence, useReducer is a hook similar to useState, but all state updates are managed in a separate function, providing a more structured way to handle complex state logic.
 ```javascript
 function shoppingCartReducer(state, action) {
   if (action.type === "ADD_ITEM") {
@@ -79,22 +79,23 @@ function shoppingCartReducer(state, action) {
   }
 }
 ```
-<code>shoppingCartReducer</code> receive 2 parameters. 
+<code>shoppingCartReducer</code> function takes two parameters:
 
-- state ➡️ the latest state at the moment we call this function
-- action ➡️ commonly a object with some key-values like <code>{type: 'ADD_ITEM', payload: id}</code>
+- state ➡️ the most recent state when the reducer function is called.
+- action ➡️ typically an object containing key-value pairs, such as <code>{type: 'ADD_ITEM', payload: id}</code>
 
 ## 🌐 Using context 🌐
-For use context we need to import two things
+To use a context, we need to import two things:
 ```javascript
 import { useContext } from "react";
 import { CartContext } from "../store/shopping-cart-context";
 ```
-Then we can destructure the context we need from the context object we created 
+Next, we can destructure the specific context we need from the context object we previously created.
+
 ```javascript
 const { items, updateCartItemQuantity } = useContext(CartContext);
 ```
-And finally we just use it as it is supposed to be used
+Finally, we use the context as intended in our application.
 ```javascript
 const totalPrice = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
@@ -110,7 +111,10 @@ const totalPrice = items.reduce(
           }
 </ul>
 ```
-With all the above we've been implemented globally state using context avoiding prop drilling and separating the state updating logic with reducer making a code more leaner and easy to mantain.
+With all the above, we have implemented a global state using context, avoiding prop drilling and separating the state update logic using a reducer. 
+This approach makes our code cleaner, more maintainable, and easier to understand.
+> [!NOTE]
+> Prop drilling is passing data through multiple layers of components via props. Context avoids this by providing a way to share data directly with any component, no matter how deep it is in the tree.
 
 ---
 <p align="center">🌟 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🌟</p>
