@@ -115,10 +115,12 @@ const totalPrice = items.reduce(
           }
 </ul>
 ```
-With all the above, we have implemented a global state using context, avoiding prop drilling and separating the state update logic using a reducer. 
-This approach makes our code cleaner, more maintainable, and easier to understand.
 > [!NOTE]
 > Prop drilling is passing data through multiple layers of components via props. Context avoids this by providing a way to share data directly with any component, no matter how deep it is in the tree.
+
+With all the above, we have implemented a global state using context, avoiding prop drilling and separating the state update logic using a reducer. 
+This approach makes our code cleaner, more maintainable, and easier to understand.
+
 
 ---
 <p align="center">🌟 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🌟</p>
