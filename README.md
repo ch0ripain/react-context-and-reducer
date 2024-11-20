@@ -58,11 +58,11 @@ const [shoppingCartState, shoppingCartDispatch] = useReducer(
     }
   );
 ```
-As shown above, the <code>shoppingCartState<code> should be treated as a read-only value.
+As shown above, the <code>shoppingCartState</code> should be treated as a read-only value.
 
-On the other hand, <code>shoppingCartDispatch<code> is the dispatcher function that we use to pass the updated state and the type of change we want to perform.
+On the other hand, <code>shoppingCartDispatch</code> is the dispatcher function that we use to pass the updated state and the type of change we want to perform.
 
-The <code>useReducer()<code> hook takes two arguments:
+The <code>useReducer()</code> hook takes two arguments:
 
 -A function that contains all the logic for updating the state.
 -The initial state value.
