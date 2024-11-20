@@ -64,8 +64,9 @@ On the other hand, <code>shoppingCartDispatch</code> is the dispatcher function 
 
 The <code>useReducer()</code> hook takes two arguments:
 
--A function that contains all the logic for updating the state.
--The initial state value.
+- A function that contains all the logic for updating the state.
+- The initial state value.
+
 In essence, useReducer is a hook similar to useState, but all state updates are managed in a separate function, providing a more structured way to handle complex state logic.
 ```javascript
 function shoppingCartReducer(state, action) {
