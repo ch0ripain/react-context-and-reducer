@@ -1,4 +1,5 @@
-# 🚀 Quick Introduction to React Context & Reducer 🚀
+<h1 align="center"> 🚀 Quick Introduction to React Context & Reducer 🚀 </h1>
+
 ## 🌐 Context 🌐
 In React, a Context is a common way to share state globally across your application. 
 To get started, you first need to create the context. This can be done using a function provided by React ➡️ <code>createContext</code> 
@@ -123,5 +124,4 @@ This approach makes our code cleaner, more maintainable, and easier to understan
 
 
 ---
-<p align="center">🌟 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🌟</p>
-<p align="center">🐸 I hope this README helps you in some way! 🐸</p>
+<p align="center">🐸 This project is a practice exercise I learned from the <a href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=ST7MT110524'>Academind's React Course</a> 🐸</p>
